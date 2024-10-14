@@ -1,0 +1,30 @@
+#include<bits/stdc++.h>
+int singleNonDuplicate(vector<int>& arr)
+{
+	int n=arr.size();
+	int low=1;
+	int high=n-2;
+
+	if(arr[0]!=arr[low])	return arr[0];
+	if(arr[n-1]!=arr[high]) return arr[n-1];
+
+	while(left<=right){
+		int mid=(low+high)/2;
+
+		if((arr[mid]!=arr[mid-1])&&(arr[mid]!=arr[mid+1])){
+			return arr[mid];
+		}
+		//we are on left i.e element is present at right
+		else if((mid%2==1 && arr[mid]==arr[mid-1])||(mid%2==0 && arr[mid]==arr[mid+1])){
+			low=mid+1;
+		}
+		//we are on right i.e element is present on left
+		else{
+			high=mid-1;
+		}
+	}
+}
+
+int main(){
+    
+}
