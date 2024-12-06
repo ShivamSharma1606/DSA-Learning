@@ -2,6 +2,8 @@
 // this code only work for sorted array
 
 // brute force approach
+#include <bits/stdc++.h>
+using namespace std;
 string read(int n, vector<int> book, int target)
 {
     int count = 0;

@@ -15,4 +15,4 @@ int maximumProfit(vector<int> &arr)
 
 int main()
 {
-}
+}   
